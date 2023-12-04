@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+          <Route index path="/" element={<Home />} />
           <Route path="News/*" element={<News/>} />
           <Route path="Contact/*" element={<Contact/>} />
           <Route path="*" element={<h1>Not Found</h1>} />

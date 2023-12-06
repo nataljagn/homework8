@@ -9,7 +9,7 @@ const News = () => {
 
     useEffect(() => {
         client.getEntry(newsId).then((response) => {
-            console.log(response);
+            //console.log(response);
             setNews(response);
         });
     }, [])
@@ -25,6 +25,9 @@ const News = () => {
             <thead>
                 <tr>
                     <td align="center"><h1>{News.fields.title}</h1></td> 
+                </tr>
+                <tr>
+                    <td align="center"><h1><img src={News.fields.image.fields.file.url} height="400" /></h1></td> 
                 </tr>
             </thead>
             <tbody>
